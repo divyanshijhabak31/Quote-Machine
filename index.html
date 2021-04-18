@@ -21,7 +21,7 @@
         const btn=document.querySelector("#btn");
         btn.addEventListener("click", getquote());
         function getquote(){
-        	fetch("https://github.com/lukePeavey/quotable.io")
+        	fetch("https://api.quotable.io/random")
         	.then(res=>res.json())
         	.then(data=>{
         		quote.innerHTML=`"${data.content}"`;
